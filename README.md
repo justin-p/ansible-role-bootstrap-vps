@@ -16,8 +16,8 @@ Huge thanks to developers of the roles listed below for making this yell of a lo
 
 ## Role Variables
 
-| Name                                 | Description                                                                                                                                                    | Default value                                                              |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Variable                                 | Description                                                                                                                                                    | Default value                                                              |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
 | bsh_host_fqdn                        | Hostname used for postifx and logwatch. This should be set to a FQDN.                                                                                          | host.domain.tld                                                            |
 | bsh_sshkey_folder                    | Local folder where the ssh keypair for bsh_admin_public_key_path is stored.                                                                                    | ~/.ssh                                                                     |
 | bsh_root_username                    | The initial username on the system. If your provider already sets up a non-root account use that information here and under any bsh_admin variables.           | root                                                                       |
@@ -127,4 +127,4 @@ MIT
 
 ## Author Information
 
-Justin Perdok
+- Justin Perdok ([@justin-p](https://github.com/justin-p/))
