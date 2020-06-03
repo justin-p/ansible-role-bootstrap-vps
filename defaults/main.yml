@@ -8,13 +8,11 @@ bsh_root_password_salt: aeb0753e9ea66ac8a0a64248cf8fd88d!
 bsh_admin_username: admin
 bsh_admin_password: 3053da8d3858f9f0d3e4f52ebdc17fb3@
 bsh_admin_password_salt: 174ca66f4c677c7653037a722091db37%
-bsh_docker_username: docker
 bsh_admin_public_key_path: "{{ bsh_sshkey_folder }}/id_rsa.pub"
 bsh_admin_mailto: admin@domain.tld
 bsh_postfix_hostname: "{{ bsh_host_fqdn }}"
 bsh_postfix_aliases:
-  - user: root
-    alias: "{{ bsh_admin_mailto }}"
+  - { user: root, alias: "{{ bsh_admin_mailto }}" }
 bsh_packges_to_install:
   - vim
   - htop
@@ -32,10 +30,7 @@ bsh_unattended_automatic_reboot_time: "04:00"
 bsh_unattended_mail: "{{ bsh_admin_mailto }}"
 bsh_unattended_mail_only_on_error: true
 bsh_fail2ban_services:
-  - name: sshd
-    port: 22
-    maxretry: 3
-    bantime: -1
+  - { name: sshd, port: 22, maxretry: 3, bantime: -1 }
 bsh_fail2ban_ignoreips: [127.0.0.1/8]
 bsh_fail2ban_bantime: -1
 bsh_fail2ban_maxretry: 5
