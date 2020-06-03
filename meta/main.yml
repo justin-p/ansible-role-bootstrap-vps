@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: bootstrap-host
   author: Justin Perdok
   description: My host bootstrap role
   license: MIT
