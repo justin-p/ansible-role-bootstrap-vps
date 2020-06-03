@@ -2,6 +2,22 @@
 - name: Converge
   hosts: all
   pre_tasks:
+    - name: Create .ssh folder in the users home folder (for github actions).
+      file:
+        path: "~/.ssh/"
+        mode: '0700'
+        state: directory
+      delegate_to: localhost
+      tags:
+        - molecule-idempotence-notest
+
+    - name: Ensure needed ssh keypair is created.
+      openssh_keypair:
+        path: "~/.ssh/id_rsa"
+      delegate_to: localhost
+      tags:
+        - molecule-idempotence-notest
+
     - name: Update apt cache.
       apt:
         update_cache: true
@@ -10,6 +26,8 @@
     - name: Install OpenSSH.
       apt:
         name: openssh-server
+      tags:
+        - molecule-idempotence-notest
 
     - name: Create /var/run/sshd directory.
       file:
@@ -17,11 +35,6 @@
         state: directory
       tags:
         - molecule-idempotence-notest
-
-    - name: Ensure needed ssh keys are created.
-      openssh_keypair:
-        path: "~/.ssh/id_rsa"
-      delegate_to: localhost
 
   tasks:
     - name: Include "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}".
