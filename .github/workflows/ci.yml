@@ -5,10 +5,16 @@ name: CI
     paths-ignore: 
       - 'README.md'
       - 'LICENSE.md' 
+      - '.gitignore'
+      - '.travis.yml'
+      - '.yamllint'
   push:
     paths-ignore: 
       - 'README.md'
-      - 'LICENSE.md'
+      - 'LICENSE.md' 
+      - '.gitignore'
+      - '.travis.yml'
+      - '.yamllint'
     branches:
       - master
   schedule:
