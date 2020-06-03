@@ -16,6 +16,7 @@ Huge thanks to developers of the roles listed below for making this yell of a lo
 - oefenweb.haveged
 - hwwilliams.logwatch
 
+
 ## Role Variables
 
 | Variable                                 | Description                                                                                                                                                    | Default value                                                              |
