@@ -1,0 +1,9 @@
+---
+- name: Install and setup unattended-upgrades.
+  include_role:
+    name: jnv.unattended-upgrades
+  vars:
+    unattended_automatic_reboot: "{{ bsh_unattended_automatic_reboot }}"
+    unattended_automatic_reboot_time: "{{ bsh_unattended_automatic_reboot_time }}"
+    unattended_mail: "{{ bsh_unattended_mail }}"
+    unattended_mail_only_on_error: "{{ bsh_unattended_mail_only_on_error }}"

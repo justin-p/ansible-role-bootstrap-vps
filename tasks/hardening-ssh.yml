@@ -1,0 +1,6 @@
+---
+- name: Setup SSH hardening.
+  include_role:
+    name: dev-sec.ssh-hardening
+  vars:
+    ssh_allow_users: "{{ bsh_ssh_allow_users }}"

@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Justin Perdok
+  description: My host bootstrap role
+  license: MIT
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: Ubuntu
+    versions:
+      - 1804
+
+  galaxy_tags: []
+
+dependencies: []

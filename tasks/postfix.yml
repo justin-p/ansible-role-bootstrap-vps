@@ -1,0 +1,7 @@
+---
+- name: Install and setup fail2ban.
+  include_role:
+    name: oefenweb.postfix
+  vars:
+    postfix_hostname: "{{ bsh_postfix_hostname }}"
+    postfix_aliases: "{{ bsh_postfix_aliases }}"

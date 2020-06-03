@@ -1,0 +1,18 @@
+---
+- name: Ensure UFW is installed.
+  apt:
+    name: ufw
+    state: present
+
+- name: Setup allow TCP rules.
+  ufw:
+    rule: "{{ item.rule }}"
+    port: "{{ item.port }}"
+    proto: "{{ item.proto }}"
+    interface: "{{ item.interface }}"
+    direction: "{{ item.direction }}"
+  with_items: "{{ bsh_ufw_rules }}"
+
+- name: Enable UFW
+  ufw:
+    state: enabled

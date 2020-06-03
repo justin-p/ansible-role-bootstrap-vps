@@ -1,0 +1,27 @@
+---
+- name: Set the root user password if we are currently the root user.
+  user:
+    name: "{{ bsh_root_username }}"
+    password: "{{ bsh_root_password | password_hash('sha512', bsh_root_password_salt) }}"
+    update_password: always
+  when: ansible_user == bsh_root_username
+
+- name: Add a non-root sudo user.
+  user:
+   name: "{{ bsh_admin_username }}"
+   password: "{{ bsh_admin_password | password_hash('sha512', bsh_admin_password_salt) }}"
+   groups: [sudo]
+   append: yes
+   state: present
+   shell: /bin/bash
+   system: no
+   createhome: yes
+   home: /home/{{ bsh_admin_username }}
+   generate_ssh_key: yes
+   ssh_key_bits: 2048
+
+- name: Add public key to newly created user.
+  authorized_key:
+    user: "{{ bsh_admin_username }}"
+    key: "{{ lookup('file', bsh_admin_public_key_path) }}"
+    state: present

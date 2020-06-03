@@ -1,0 +1,4 @@
+---
+- name: Install and setup haveged.
+  include_role:
+    name: oefenweb.haveged

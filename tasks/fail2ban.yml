@@ -1,0 +1,9 @@
+---
+- name: Install and setup fail2ban.
+  include_role:
+    name: oefenweb.fail2ban
+  vars:
+    fail2ban_services: "{{ bsh_fail2ban_services }}"
+    fail2ban_ignoreips: "{{ bsh_fail2ban_ignoreips }}"
+    fail2ban_bantime: "{{ bsh_fail2ban_bantime }}"
+    fail2ban_maxretry: "{{ bsh_fail2ban_maxretry }}"

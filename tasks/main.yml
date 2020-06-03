@@ -1,0 +1,20 @@
+---
+- import_tasks: ansible-galaxy-requirements.yml
+- block:
+  - import_tasks: users.yml
+  - import_tasks: postfix.yml
+  - import_tasks: packages.yml
+  - import_tasks: haveged.yml
+  - import_tasks: hardening-os.yml
+  - import_tasks: ufw.yml
+  - import_tasks: unattended-upgrades.yml
+  - import_tasks: fail2ban.yml
+  - import_tasks: logwatch.yml
+  become: true
+
+- name: Flush handlers
+  meta: flush_handlers
+
+- block:
+  - import_tasks: hardening-ssh.yml
+  become: true

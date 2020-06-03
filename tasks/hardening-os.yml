@@ -1,0 +1,6 @@
+---
+- name: Setup OS hardening.
+  include_role:
+    name: dev-sec.os-hardening
+  vars:
+    sysctl_overwrite: "{{ bsh_sysctl_overwrite }}"

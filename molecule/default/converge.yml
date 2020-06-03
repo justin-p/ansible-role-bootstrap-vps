@@ -1,0 +1,23 @@
+---
+- name: Converge
+  hosts: all
+  pre_tasks:
+    - name: Update apt cache.
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install OpenSSH.
+      apt:
+        name: openssh-server
+
+    - name: Create /var/run/sshd directory.
+      file:
+        path: /var/run/sshd
+        state: directory
+      tags:
+        - molecule-idempotence-notest
+  tasks:
+    - name: Include bootstrap-host.
+      include_role:
+        name: "bootstrap-host"

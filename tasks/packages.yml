@@ -1,0 +1,21 @@
+---
+- name: Update apt cache.
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+    cache_valid_time: 3600
+  become: yes
+
+- name: Upgraded installed packages.
+  apt:
+    upgrade: dist
+    force_apt_get: yes
+  become: yes
+  notify: reboot
+  tags: ['molecule-notest']
+
+- name: Install management packages.
+  apt:
+    pkg: "{{ bsh_packges_to_install }}"
+    state: present
+  become: yes

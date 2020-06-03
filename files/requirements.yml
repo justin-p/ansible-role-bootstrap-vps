@@ -1,0 +1,22 @@
+---
+roles:
+- name: dev-sec.ssh-hardening
+  version: 7.0.0
+
+- name: dev-sec.os-hardening
+  version: 5.2.1
+
+- name: jnv.unattended-upgrades
+  version: v1.8.0
+
+- name: oefenweb.fail2ban
+  version: v3.3.10
+
+- name: oefenweb.postfix
+  version: v2.10.3
+
+- name: oefenweb.haveged
+  version: v1.1.25
+
+- name: hwwilliams.logwatch
+  version: v1.0

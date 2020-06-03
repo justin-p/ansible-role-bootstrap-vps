@@ -1,0 +1,5 @@
+---
+# handlers file for bootstrap-host
+- name: reboot
+  reboot:
+  become: true

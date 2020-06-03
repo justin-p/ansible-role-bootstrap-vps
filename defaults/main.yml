@@ -1,0 +1,48 @@
+---
+# defaults file for bootstrap-host
+bsh_host_fqdn: host.domain.tld
+bsh_sshkey_folder: ~/.ssh
+bsh_root_username: root
+bsh_root_password: 293f557d663c0da6f17b5659c2fd32f3!
+bsh_root_password_salt: aeb0753e9ea66ac8a0a64248cf8fd88d!
+bsh_admin_username: admin
+bsh_admin_password: 3053da8d3858f9f0d3e4f52ebdc17fb3@
+bsh_admin_password_salt: 174ca66f4c677c7653037a722091db37%
+bsh_docker_username: docker
+bsh_admin_public_key_path: "{{ bsh_sshkey_folder }}/id_rsa.pub"
+bsh_admin_mailto: admin@domain.tld
+bsh_postfix_hostname: "{{ bsh_host_fqdn }}"
+bsh_postfix_aliases:
+  - user: root
+    alias: "{{ bsh_admin_mailto }}"
+bsh_packges_to_install:
+  - vim
+  - htop
+  - ranger
+  - tmux
+  - ncdu
+bsh_ufw_rules:
+  - { rule: allow, interface: eth0, proto: tcp, port:  '22', direction: in }
+  - { rule: allow, interface: eth0, proto: tcp, port:  '80', direction: in }
+  - { rule: allow, interface: eth0, proto: tcp, port: '443', direction: in }
+bsh_sysctl_overwrite:
+  - { net.ipv4.ip_forward: 0 }
+bsh_unattended_automatic_reboot: true
+bsh_unattended_automatic_reboot_time: "04:00"
+bsh_unattended_mail: "{{ bsh_admin_mailto }}"
+bsh_unattended_mail_only_on_error: true
+bsh_fail2ban_services:
+  - name: sshd
+    port: 22
+    maxretry: 3
+    bantime: -1
+bsh_fail2ban_ignoreips: [127.0.0.1/8]
+bsh_fail2ban_bantime: -1
+bsh_fail2ban_maxretry: 5
+bsh_logwatch_mailfrom: Logwatch@{{ bsh_host_fqdn }}
+bsh_logwatch_mailto: root
+bsh_logwatch_detail: high
+bsh_logwatch_range: today
+bsh_logwatch_output: stdout
+bsh_logwatch_format: html
+bsh_ssh_allow_users: "{{ bsh_admin_username }}"

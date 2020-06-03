@@ -1,0 +1,11 @@
+---
+- name: Install and setup logwatch.
+  include_role:
+    name: hwwilliams.logwatch
+  vars:
+    logwatch_mailfrom: "{{ bsh_logwatch_mailfrom }}"
+    logwatch_mailto: "{{ bsh_logwatch_mailto }}"
+    logwatch_detail: "{{ bsh_logwatch_detail }}"
+    logwatch_range: "{{ bsh_logwatch_range }}"
+    logwatch_output: "{{ bsh_logwatch_output }}"
+    logwatch_format: "{{ bsh_logwatch_format }}"
