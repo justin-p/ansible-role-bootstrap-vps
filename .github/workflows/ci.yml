@@ -17,6 +17,7 @@ name: CI
       - '.yamllint'
     branches:
       - master
+      - refs/tags/* 
   schedule:
     - cron: '0 16 * * *'
       
