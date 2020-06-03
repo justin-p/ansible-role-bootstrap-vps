@@ -3,9 +3,9 @@
 ![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-bootstrap-host/CI?label=Github%20Actions&logo=github&style=flat-square)
 ![Travis](https://img.shields.io/travis/justin-p/ansible-bootstrap-host?label=Travis&logo=travis&style=flat-square)
 
-A Ansible role I build for quickly configuring and hardening a new Ubuntu VPS.  
+A Ansible role I build for quickly configuring and hardening a new Ubuntu VPS to my personal standards.  
 
-You probably don't want to use the default password/salt values. Overwrite these in each project with unique values and store them securely with Ansible Vault. There are also some other variables you want to overwrite. These are listed in the Example Playbook.
+If you where to use this role you probably don't want to use the default password/salt values. Overwrite these in each project with unique values and store them securely with Ansible Vault. There are also some other variables you want to overwrite. These are listed in the Example Playbook.
 
 Huge thanks to developers of the roles listed below:
 
