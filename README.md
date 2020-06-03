@@ -4,6 +4,16 @@ A Ansible role I build for quickly configuring and hardening a new VPS.
 
 You probably don't want to use the default password/salt values. Overwrite these in each project with unique values and store them securely with Ansible Vault. There are also some other variables you want to overwrite. These are listed in the Example Playbook.
 
+Huge thanks to developers of the roles listed below for making this yell of a lot less work.
+
+- dev-sec.ssh-hardening
+- dev-sec.os-hardening
+- jnv.unattended-upgrades
+- oefenweb.fail2ban
+- oefenweb.postfix
+- oefenweb.haveged
+- hwwilliams.logwatch
+
 ## Role Variables
 
 | Name                                 | Description                                                                                                                                                    | Default value                                                              |
