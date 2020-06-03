@@ -1,8 +1,14 @@
 ---
 name: CI
 'on':
-  pull_request:   
+  pull_request:
+    paths-ignore: 
+      - 'README.md'
+      - 'LICENSE.md' 
   push:
+    paths-ignore: 
+      - 'README.md'
+      - 'LICENSE.md'
     branches:
       - master
   schedule:
