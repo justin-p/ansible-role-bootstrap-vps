@@ -18,6 +18,6 @@
       tags:
         - molecule-idempotence-notest
   tasks:
-    - name: Include bootstrap-host.
+    - name: Include "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}".
       include_role:
-        name: "bootstrap-host"
+        name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
