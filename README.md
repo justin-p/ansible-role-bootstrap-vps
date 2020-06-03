@@ -1,5 +1,7 @@
 # Bootstrap-host
 
+![CI](https://github.com/justin-p/ansible-bootstrap-host/workflows/CI/badge.svg)
+
 A Ansible role I build for quickly configuring and hardening a new VPS.  
 
 You probably don't want to use the default password/salt values. Overwrite these in each project with unique values and store them securely with Ansible Vault. There are also some other variables you want to overwrite. These are listed in the Example Playbook.
