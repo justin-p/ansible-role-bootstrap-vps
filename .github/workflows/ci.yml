@@ -7,8 +7,8 @@ name: CI
       - master
   schedule:
     - cron: '0 16 * * *'
+      
 jobs:
-
   test:
     name: Molecule
     runs-on: ubuntu-latest
