@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - bootstrap-host
+    - bootstrap_host
