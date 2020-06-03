@@ -9,7 +9,8 @@ galaxy_info:
   platforms:
   - name: Ubuntu
     versions:
-      - 1804
+      - bionic
+      - artful
 
   galaxy_tags: []
 
