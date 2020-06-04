@@ -13,6 +13,8 @@ bsh_admin_mailto: admin@domain.tld
 bsh_postfix_hostname: "{{ bsh_host_fqdn }}"
 bsh_postfix_aliases:
   - { user: root, alias: "{{ bsh_admin_mailto }}" }
+bsd_postfix_relayhost_port: 587
+bsd_postfix_relaytls: true
 bsh_packges_to_install:
   - vim
   - htop
@@ -34,7 +36,7 @@ bsh_fail2ban_services:
 bsh_fail2ban_ignoreips: [127.0.0.1/8]
 bsh_fail2ban_bantime: -1
 bsh_fail2ban_maxretry: 5
-bsh_logwatch_mailfrom: Logwatch@{{ bsh_host_fqdn }}
+bsh_logwatch_mailfrom: logwatch@{{ bsh_host_fqdn }}
 bsh_logwatch_mailto: root
 bsh_logwatch_detail: high
 bsh_logwatch_range: today
