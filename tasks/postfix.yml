@@ -1,7 +1,23 @@
 ---
-- name: Install and setup Postfix.
+- name: Install and setup Postfix with relay.
   include_role:
     name: oefenweb.postfix
   vars:
     postfix_hostname: "{{ bsh_postfix_hostname }}"
     postfix_aliases: "{{ bsh_postfix_aliases }}"
+    postfix_relayhost: "{{ bsd_postfix_relayhost }}"
+    postfix_relayhost_port: "{{ bsd_postfix_relayhost_port }}"
+    postfix_sasl_user: "{{ bsd_postfix_sasl_user }}"
+    postfix_sasl_password: "{{ bsd_postfix_sasl_password }}"
+    postfix_relaytls: "{{ bsd_postfix_relaytls }}"
+  when:
+    - bsd_postfix_relayhost is defined and bsd_postfix_sasl_user is defined and bsd_postfix_sasl_password is defined
+
+- name: Install and setup Postfix without relay.
+  include_role:
+    name: oefenweb.postfix
+  vars:
+    postfix_hostname: "{{ bsh_postfix_hostname }}"
+    postfix_aliases: "{{ bsh_postfix_aliases }}"
+  when:
+    - bsd_postfix_relayhost is not defined or bsd_postfix_sasl_user is not defined or bsd_postfix_sasl_password is not defined
