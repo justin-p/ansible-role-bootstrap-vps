@@ -4,7 +4,6 @@
     name: oefenweb.postfix
   vars:
     postfix_hostname: "{{ bsh_postfix_hostname }}"
-    postfix_aliases: "{{ bsh_postfix_aliases }}"
     postfix_relayhost: "{{ bsd_postfix_relayhost }}"
     postfix_relayhost_port: "{{ bsd_postfix_relayhost_port }}"
     postfix_sasl_user: "{{ bsd_postfix_sasl_user }}"
@@ -18,6 +17,5 @@
     name: oefenweb.postfix
   vars:
     postfix_hostname: "{{ bsh_postfix_hostname }}"
-    postfix_aliases: "{{ bsh_postfix_aliases }}"
   when:
     - bsd_postfix_relayhost is not defined or bsd_postfix_sasl_user is not defined or bsd_postfix_sasl_password is not defined
