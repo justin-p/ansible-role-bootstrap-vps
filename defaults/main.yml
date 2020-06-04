@@ -11,8 +11,6 @@ bsh_admin_password_salt: 174ca66f4c677c7653037a722091db37%
 bsh_admin_public_key_path: "{{ bsh_sshkey_folder }}/id_rsa.pub"
 bsh_admin_mailto: admin@domain.tld
 bsh_postfix_hostname: "{{ bsh_host_fqdn }}"
-bsh_postfix_aliases:
-  - { user: root, alias: "{{ bsh_admin_mailto }}" }
 bsd_postfix_relayhost_port: 587
 bsd_postfix_relaytls: true
 bsh_packges_to_install:
