@@ -7,7 +7,6 @@ on:
     paths-ignore: 
       - '.github/**'
       - 'meta/**'
-      - 'tests/**'
       - 'README.md'
       - 'LICENSE'
       - '.gitignore'
@@ -19,7 +18,6 @@ on:
     paths-ignore: 
       - '.github/**'
       - 'meta/**'
-      - 'tests/**'
       - 'README.md'
       - 'LICENSE'
       - '.gitignore'
