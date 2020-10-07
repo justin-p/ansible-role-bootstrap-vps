@@ -1,7 +1,7 @@
 # ansible-role-bootstrap-host
 
-![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-bootstrap-host/CI?label=Github%20Actions&logo=github&style=flat-square)
-![Travis](https://img.shields.io/travis/justin-p/ansible-bootstrap-host?label=Travis&logo=travis&style=flat-square)
+![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-role-bootstrap-host/CI?label=Github%20Actions&logo=github&style=flat-square)
+![Travis](https://img.shields.io/travis/justin-p/ansible-role-bootstrap-host?label=Travis&logo=travis&style=flat-square)
 
 A Ansible role I build for quickly configuring and hardening a new Ubuntu VPS to my personal standards.  
 
