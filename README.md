@@ -1,4 +1,4 @@
-# Bootstrap-host
+# ansible-role-bootstrap-host
 
 ![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-bootstrap-host/CI?label=Github%20Actions&logo=github&style=flat-square)
 ![Travis](https://img.shields.io/travis/justin-p/ansible-bootstrap-host?label=Travis&logo=travis&style=flat-square)
