@@ -1,4 +1,4 @@
-# ansible-role-bootstrap-host
+# ansible-role-bootstrap-vps
 
 [![Ansible Role Name](https://img.shields.io/ansible/role/51178?label=Role%20Name&logo=ansible&style=flat-square)](https://galaxy.ansible.com/justin_p/bootstrap_host)
 [![Ansible Quality Score](https://img.shields.io/ansible/quality/51178?label=Ansible%20Quality%20Score&logo=ansible&style=flat-square)](https://galaxy.ansible.com/justin_p/bootstrap_host)
