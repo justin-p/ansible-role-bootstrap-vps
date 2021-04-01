@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: bootstrap_host
+  namespace: justin_p
   author: Justin Perdok
   description: My host bootstrap role
   license: MIT
