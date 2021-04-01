@@ -27,6 +27,7 @@ on:
   schedule:
     - cron: "0 16 * * *"
   release:
+    types: [prereleased, released]
 
 jobs:
   test:
